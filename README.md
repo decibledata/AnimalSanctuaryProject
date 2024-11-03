@@ -7,6 +7,8 @@ This projects approach compared to my last focuses with starting with primarily 
 
 ## TECHNOLOGIES USED
 Given our previous week we have made a shift from basic functionallity to Object Oriented Programming (OOP). OOP uses objects as a primary source to implement what is to happen in the code. Objects are seen by the viewer or user, performing tasks you assign. Primarily with methods and classes. This only scratches the surface of the complexity, as we use a few of the 4 pillars in Java.
+
+
 	* Java
  	* Eclipse
  	* Sublime
