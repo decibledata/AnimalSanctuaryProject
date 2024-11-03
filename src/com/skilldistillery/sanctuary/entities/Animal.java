@@ -12,6 +12,6 @@ public class Animal {
 	public void makeNoise() {
 	}
 	public void eat(int amountFood) {
-		
+		System.out.println("I am eating " + amountFood + "foods.");
 	}
 }
