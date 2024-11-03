@@ -12,7 +12,13 @@ public class Sanctuary {
 	public void setAttendant(Attendant attendant) {
 		this.attendant = attendant;
 }
+	
+	public void startAttendantRound() {
+		attendant.makeRounds(animals);
+	}
+	
 	public void listAnimals() {
+
 		for (int i = 0; i < animals.length; i++) {
 			if (animals[i] != null)
 				System.out.println("Sorry! This enclosure is empty.");
@@ -23,19 +29,16 @@ public class Sanctuary {
 		}
 		
 	}
+	
 	public void addAnimal(Animal animal) {
 		for (int i = 0; i < animals.length; i++) {
-			if (animals[i] == null)
-				System.out.println("Sorry! The sanctuary is full.");
-			else {
-				
+			if (animals[i] == null) {
+				animals[i] = animal;
+				System.out.println("Thank you for adding the animal to the Sanctuary!");
+				return;
 			}
 			
 		}
-		
-	}
-	
-	public void startAttendantRound() {
 		
 	}
 }
