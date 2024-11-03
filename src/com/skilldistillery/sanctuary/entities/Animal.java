@@ -8,9 +8,12 @@ public class Animal {
 	}
 
 	public void setName(String name) {
-}
+		this.name = name;
+	}
+
 	public void makeNoise() {
 	}
+
 	public void eat(int amountFood) {
 		System.out.println("I am eating " + amountFood + "foods.");
 	}
