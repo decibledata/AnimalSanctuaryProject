@@ -2,6 +2,9 @@ package com.skilldistillery.sanctuary.entities;
 
 public class Lion extends Animal{
 	private static String noise = "MEOOWW";
+	public Lion(String name) {
+		super();
+	}
 	
 	public void makeNoise() {
 		this.makeNoise();

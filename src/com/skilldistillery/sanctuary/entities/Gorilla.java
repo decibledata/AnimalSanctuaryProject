@@ -2,6 +2,9 @@ package com.skilldistillery.sanctuary.entities;
 
 public class Gorilla extends Animal{
 	private static String noise = "OOH OOH ";
+	public Gorilla(String name) {
+		super();
+	}
 	
 	public void makeNoise() {
 		this.makeNoise();

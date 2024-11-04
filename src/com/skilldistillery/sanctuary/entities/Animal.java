@@ -2,7 +2,6 @@ package com.skilldistillery.sanctuary.entities;
 
 public class Animal {
 	private String name;
-
 	public String getName() {
 		return name;
 	}
@@ -12,6 +11,7 @@ public class Animal {
 	}
 
 	public void makeNoise() {
+		
 	}
 
 	public void eat(int amountFood) {
