@@ -10,7 +10,7 @@ public class Sanctuary {
 
 		for (int i = 0; i < animals.length; i++) {
 			if (animals[i] != null) {
-				System.out.println(animal.getName());
+				System.out.println(animals[i].getName());
 			} else {
 				System.out.println("This enclosures empty");
 			}
