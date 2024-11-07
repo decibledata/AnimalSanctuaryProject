@@ -7,7 +7,7 @@ package com.skilldistillery.sanctuary.entities;
 			for (Animal animal : animals) {
 				if (animal != null) {
 					int amountFed = (int)(Math.random() * 10) + 1;
-					System.out.println("Time to feed " + animal.getName() + amountFed + " pieces of their food!");
+					System.out.println("Time to feed " + animal.getName() + " " + amountFed + " pieces of their food!\n");
 					animal.makeNoise();
 					animal.eatFood(amountFed);
 				}

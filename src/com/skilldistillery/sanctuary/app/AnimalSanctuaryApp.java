@@ -3,7 +3,7 @@ package com.skilldistillery.sanctuary.app;
 
 import java.util.Scanner;
 
-import com.skilldistillery.sanctuary.entities.Animal;
+import com.skilldistillery.sanctuary.entities.Attendant;
 import com.skilldistillery.sanctuary.entities.Bigfoot;
 import com.skilldistillery.sanctuary.entities.Chupacabra;
 import com.skilldistillery.sanctuary.entities.LochnessMonster;
@@ -22,7 +22,7 @@ public class AnimalSanctuaryApp {
 			
 			Sanctuary sanctuary = new Sanctuary();
 			Scanner kb = new Scanner(System.in);
-			
+		
 			System.out.println("Welcome to the Cryptid Sanctuary! \nPlease make a selection.\n\n");
 			
 			while (true) {
@@ -38,7 +38,7 @@ public class AnimalSanctuaryApp {
 				switch (selection) {	
 				
 				case 1:
-					sanctuary.listAnimals();
+					sanctuary.listAnimals(null);
 					break;
 					
 				case 2:
@@ -53,31 +53,31 @@ public class AnimalSanctuaryApp {
 					
 					case 1:
 					
-						sanctuary.addAnimal(new Bigfoot());
-						System.out.println("Bigfoots new name is " + name + "!");
+						sanctuary.addAnimal(new Bigfoot(name));
+						System.out.println("Bigfoots new name is " + name + "!\n");
 						break;
 						
 					case 2:
 				
-						sanctuary.addAnimal(new Chupacabra());
-						System.out.println("Chupacabra's new name is " + name + "!");
+						sanctuary.addAnimal(new Chupacabra(name));
+						System.out.println("Chupacabra's new name is " + name + "!\n");
 						break;
 						
 					case 3:
 						
-						sanctuary.addAnimal(new Mothman());
-						System.out.println("Mothman's new name is " + name + "!");
+						sanctuary.addAnimal(new Mothman(name));
+						System.out.println("Mothman's new name is " + name + "!\n");
 						break;
 						
 					case 4:
 					
-						sanctuary.addAnimal(new LochnessMonster());
-						System.out.println("Lochness Monster's new name is " + name + "!");
+						sanctuary.addAnimal(new LochnessMonster(name));
+						System.out.println("Lochness Monster's new name is " + name + "!\n");
 						break;
 						
 					case 5:
 					
-						sanctuary.addAnimal(new Yeti());
+						sanctuary.addAnimal(new Yeti(name));
 						System.out.println("Yeti's new name is " + name + "!");
 						break;
 					
@@ -89,7 +89,9 @@ public class AnimalSanctuaryApp {
 					break;
 				
 				case 3:
-					sanctuary.startAttendantRounds(null);
+					Attendant attendant = new Attendant();
+					sanctuary.setAttendant(attendant);
+					sanctuary.startAttendantRounds();
 					break;
 					
 				case 4:
