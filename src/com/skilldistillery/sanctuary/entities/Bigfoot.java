@@ -3,6 +3,8 @@ package com.skilldistillery.sanctuary.entities;
 public class Bigfoot extends Animal{
 	
 	private static String noise = "GROWL! HOWL!";
+		// TODO Auto-generated constructor stub
+	
 	@Override
 	public void makeNoise() {
 		

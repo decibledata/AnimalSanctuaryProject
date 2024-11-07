@@ -1,5 +1,6 @@
 package com.skilldistillery.sanctuary.app;
 
+
 import java.util.Scanner;
 
 import com.skilldistillery.sanctuary.entities.Animal;
@@ -12,11 +13,9 @@ import com.skilldistillery.sanctuary.entities.Yeti;
 
 public class AnimalSanctuaryApp {
 	
-		Sanctuary sanctuary;
-		Scanner kb = new Scanner(System.in);
-
 		public static void main(String[] args) {
-			
+			AnimalSanctuaryApp app = new AnimalSanctuaryApp();
+			app.launchApp();
 		}
 		
 		public void launchApp() {
@@ -24,7 +23,7 @@ public class AnimalSanctuaryApp {
 			Sanctuary sanctuary = new Sanctuary();
 			Scanner kb = new Scanner(System.in);
 			
-			System.out.println("Welcome to the Cryptid Sanctuary! \nPlease make a selection.");
+			System.out.println("Welcome to the Cryptid Sanctuary! \nPlease make a selection.\n\n");
 			
 			while (true) {
 				System.out.println("________CRYPTiD_SANCTUARY________");
@@ -32,54 +31,54 @@ public class AnimalSanctuaryApp {
 				System.out.println("2. Add a creature ");
 				System.out.println("3. Start the feeding ");
 				System.out.println("4. Exit.");
-				System.out.println("_________________________________");
-				
+				System.out.println("_________________________________\n ");
+				System.out.println();
 				int selection = kb.nextInt();
+								
+				switch (selection) {	
 				
-				switch (selection) {
-					
 				case 1:
 					sanctuary.listAnimals();
 					break;
 					
 				case 2:
-					System.out.println("Choose a creature to add into the sanctuary. \n1. Bigfoot \n2. Chupacabra \n3. Mothman \n4. Loch-Ness Monster \n5. Yeti");
+					System.out.println("\nChoose a creature to add into the sanctuary. \n1. Bigfoot \n2. Chupacabra "
+							+ "\n3. Mothman \n4. Loch-Ness Monster \n5. Yeti\n\n");
 					int choice = kb.nextInt();
 					
-					System.out.println("Please enter a name for this creature. ");
-					String name = kb.nextLine();
-					
-					Animal animal = null;
+					System.out.println("\nPlease enter a name for this creature. ");
+					String name = kb.next();
+				
 					switch (choice) {
 					
 					case 1:
-						animal = new Bigfoot();
-						sanctuary.addAnimal(animal);
-						animal.getName();
+					
+						sanctuary.addAnimal(new Bigfoot());
+						System.out.println("Bigfoots new name is " + name + "!");
 						break;
 						
 					case 2:
-						animal = new Chupacabra();
-						sanctuary.addAnimal(animal);
-						animal.getName();
+				
+						sanctuary.addAnimal(new Chupacabra());
+						System.out.println("Chupacabra's new name is " + name + "!");
 						break;
 						
 					case 3:
-						animal = new Mothman();
-						sanctuary.addAnimal(animal);
-						animal.getName();
+						
+						sanctuary.addAnimal(new Mothman());
+						System.out.println("Mothman's new name is " + name + "!");
 						break;
 						
 					case 4:
-						animal = new LochnessMonster();
-						sanctuary.addAnimal(animal);
-						animal.getName();
+					
+						sanctuary.addAnimal(new LochnessMonster());
+						System.out.println("Lochness Monster's new name is " + name + "!");
 						break;
 						
 					case 5:
-						animal = new Yeti();
-						sanctuary.addAnimal(animal);
-						animal.getName();
+					
+						sanctuary.addAnimal(new Yeti());
+						System.out.println("Yeti's new name is " + name + "!");
 						break;
 					
 					default:
@@ -90,7 +89,7 @@ public class AnimalSanctuaryApp {
 					break;
 				
 				case 3:
-					sanctuary.startAttendantRounds();
+					sanctuary.startAttendantRounds(null);
 					break;
 					
 				case 4:
@@ -99,7 +98,7 @@ public class AnimalSanctuaryApp {
 					return;
 					
 				default:
-					System.out.println();
+					System.out.println("Invalid selection. \nPlease try again.");
 				}
 			}
  }
